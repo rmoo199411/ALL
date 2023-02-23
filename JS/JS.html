@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+
+
+    </style>
+
+    <!-- 外部連結 -->
+    <script type="text/javascript" src="js.js"></script>
+
+    <script>
+
+
+    </script>
+
+</head>
+<body>
+    <h2>JS</h2>
+    <a href="https://www.youtube.com/watch?v=Ada8py34vy0&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=15&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">影片</a>
+    <h3>基本介紹</h3>
+    <ul>
+        <li>調用a的b方法 = a.b();</li> 
+        <li>調用函數b 跑參數a = b(a); </li>
+        <li>JS六個值(前五個為基本值)
+            <ul>
+                <li>Boolean 布林值 ( ture / fales )</li>
+                <li>Number 數字 ( NAN ) </li>
+                <li>String 字串 ( " " )</li>
+                <li>Null 空值 ( Null )</li>
+                <li>Undefined 為定義( Undefined )</li>
+                <li>Object 對象</li>
+            </ul>
+        </li>
+        <li>轉換值以var a=123為例</li>
+            <ul>
+                <li>轉換字串:a.toString(); / 函數String(a)</li>
+                <li>轉換為數字</li>
+                    <ul>
+                        <li>*****布爾值轉數字ture:1 / false:0*****</li>
+                        <li>函數 Number(a);</li>
+                        <li>函數 parseInt(a); 將字符中有效整數取出，如 100px 中的100轉化為number，參數,後10則代表進制</li>
+                        <li>函數 parsefloat(a); 類似parseInt，但她可以取小數點</li>
+                    </ul>
+                <li>轉換布林值: Boolean(a); 數字轉布林除0跟NAN其他皆為ture / 字符串除空串其他皆為ture  / null、undefined都是false</li>
+            </ul>
+
+        <li>進制:16進制前面加 0x / 8進制前面加 0 /2進制前面加 0b</li>
+        <li>自增 以a=2 為例</li>
+        <a href="https://www.youtube.com/watch?v=PXC50BSG78w&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=17&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">自增</a>
+            <ul>
+                <li>cosole.log(++a)=3 為自增後的值加一(新值) </li>
+                <li>cosole.log(a++)=2 值為自增前的值  (原值) </li>
+                <li>a += 5 意思等於 a = a + 5 </li>
+                <li> % 餘數值 </li>
+            </ul>
+
+        <li>邏輯運算符號</li>
+        <a href="https://www.youtube.com/watch?v=-ekpm0h6gpk&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=19&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">影片</a>
+            <ul>
+                <li>非 = ! (也稱取反)---數字取反則會變布爾值取反、取兩次反則會成數字Number</li>
+                <li>與 = && 有一個false則返回false(數字則會變布爾值) ，ture取後值、false取前值</li>
+                <li>或 = || 有一個ture則返回ture，(數字則會變布爾值)，ture取前值、false取後值</li>
+                <li>三原運算 ?語句1:語句2  有相同概念 <a href="https://www.youtube.com/watch?v=uGLA86rkNYk&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=25&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">?</a></li> 
+            </ul>
+
+        <li>相等運算符</li>
+        <a href="https://www.youtube.com/watch?v=tdopL1DkDPE&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=24&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">影片</a>
+            <ul>
+                <li>= 為賦值</li>
+                <li>== 值的類型不同則會轉換比較</li>
+                <li>=== 全等，需要類型也相等 </li>
+            </ul>
+
+        <li>條件表達式 if 語句</li>
+        <a href="https://www.youtube.com/watch?v=eQmU1V_gdXc&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=29&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">if影片</a>
+        <a href="https://www.youtube.com/watch?v=ZrgBcOUFRN0&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=31&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">if實例練習</a>
+            <ul>
+                <li>語句由 if / else if / else 組成</li>
+                <li> if(判斷) {語句;...} ，判斷為ture則運行後面語句</li>
+                <li>if(判斷) {語句;...} eles(判斷){語句;... }判斷為false則運行後面eles語句</li>
+            </ul>
+
+        <li>條件分之語句 switch(不常用)</li>
+        <a href="https://www.youtube.com/watch?v=yBORt9P6sdE&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=33&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">switch影片</a>
+        <a href="https://www.youtube.com/watch?v=pjRbVVGzAl0&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=34&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">switch 練習</a>
+            <ul>
+                <li>switch(值a){case 值B: 語句}  case後值會跟switch值做"全等"比較，相同則跑後面"所有"語句，通常搭配break退出語句</li>
+                <li>全為false則回傳default</li>
+            </ul>
+        <li>循環語句 while</li>
+        <a href="https://www.youtube.com/watch?v=oy_sA7OwQF4&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=35&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">while語句</a>
+        <a href="https://www.youtube.com/watch?v=PhHqcTgecj8&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=36&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">while練習</a>    
+            <ul>
+                <li>while(表達式){語句...} 表達式為ture則型語句，再循環移植到表達式為false為止</li>
+                <li>do{ 語句 }while(表達式) 與上差異為，至少循環執行一次</li>
+                <li>通常搭配 break 退出循環</li>
+                <li>語句需要為更新表達式，避免"死循環"</li>
+            </ul>
+        <li>循環語句 for </li>
+        <a href="https://www.youtube.com/watch?v=M0JP5tAROnw&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=37&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">for循環</a>
+            <ul>
+                <li>for(初始化表達式 ; 條件表達式(必要) ; 更新標達式){語句...} / for(var i = 0; i < 10 ; i++ )｛alert}</li>
+                
+            </ul>
+        <li>continue 跳過當次    循環 / break 終止循環</li>
+        
+
+        <li>作用域</li>    
+            
+            <ul>
+                <li>全局作用域  </li>
+                    <a href="https://www.youtube.com/watch?v=yTBoGT0lwI4&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=58&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">全局</a>
+                    <ul>
+                        <li>指瀏覽器窗口 window對象 中</li>
+                        <li>所有函數都匯存於全局作用域的方法</li>
+                        <li>變量var 皆於全局作用域中</li>
+                        <li>全局不能訪問到函數作用域的變量</li>
+                    </ul>
+
+                <li>函數作用域</li>
+                <a href="https://www.youtube.com/watch?v=pxXs7xMPb2o&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=59&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">函數</a>
+                <a href="https://www.youtube.com/watch?v=6aliTrBrCdE&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=60&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">作用域練習、查詢
+                    
+                </a>        
+                    <ul>
+                        <li>調用函數值才會執行，函數結束即關閉</li>
+                        <li>函數中可以訪問到全局變量值</li>
+                        <li>如果作用域中沒有則會往外作用域找</li>
+                    </ul>
+            </ul>
+        <li>正則表達式</li>
+        <a href="https://www.runoob.com/js/js-regexp.html">參考資料</a>
+        <a href="https://www.youtube.com/watch?v=mHXJwnnHPEU&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=86&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">影片</a>
+                <ul>
+                    <li>檢查表達式是否合格</li>
+                    <li>寫法 /正則表達式/匹配模式  </li>
+                    <li>語法 var 變量 = new RegExp("正則表達式","匹配模式")</li>
+                    <li>匹配模式 i忽略大小寫 / g全局匹配</li>
+                    <li>正則後面加上{n,X} 正好出現n次到X次，尋找一組則用()</li>
+                    <li>+ 至少一個 / ? 0個或1個 / ^a 表示a開頭 / a$ 表示a結尾 </li>
+                    <li>變量.test(被檢查的內容); </li>
+                    <li>變量.search("是否有的內容");</li>
+                    <li>變量.match(想要提取的字母); 可以加g權局搜索全部 ，i大小寫這兩種條件 </li>
+                    <li>| 跟 [] 都是或 / [A-z] 任意寫字母  / ^ 除了</li>
+                    <li>如果想用元字符已有的符號 則前面多加 \ </li>
+                        <ul>
+                            <a href="https://www.runoob.com/jsref/jsref-obj-regexp.html">元字符表</a>
+                            <a href="https://www.youtube.com/watch?v=qIUdrXoHC-4&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=89&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">元字符影片</a>
+                            <li>\b 前後空格 - 用來尋找單詞</li>
+                            <li>\s 去除空格</li>
+                            <li>\w 任意數字字母</li>
+                        </ul>
+                    <li>例子</li>
+                    <ul>
+                        <li>中國手機號碼</li>
+                            <ul>
+                                <li>條件: 開頭:1 / 第二位3-9任意數字 / 三位以後任意數9個</li>
+                                <li>表達式 = /^a[3-9][0-9]{9}$/</li>
+                                <li>測試: 表達式.test(測試號碼)</li>
+                            </ul>
+                        <li>郵件正則</li>
+                            <ul>
+                                <li>條件:數字字母任意3個以上 / .任意數字下滑線(可有可無) / 中間要有@ /任意字母數字 /  . / 任意字母2-5  / . / 任意字母2-5</li>
+                                <li>^\w{3} (\. (\w+))* @ [A-z0-9]  +  (\.[A-z]{2,5}){1,2}$ </li>
+                            </ul>
+                    </ul>
+                </ul>
+            <li>DOM</li>
+            <a href="https://www.youtube.com/watch?v=3D-3Bp7OvOE&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=91&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">DOM</a>
+                <ul>
+                    <li>文檔對象模型: 文檔整的就是html檔 / 模型指的是整個html的樹狀圖</li>
+                    <li>節點介紹 
+                        <ul>
+                            <li>文檔節點 : html本身-document</li>
+                            <li>元素節點 : 指的是標籤 p、li.....</li>
+                            <li>屬性節點 : 指的是id、class、name.....</li>
+                            <li>文本節點 : 的是標籤裡的內?</li>
+                        </ul>
+                    <li>事件:指的是在用戶在頁面上的互動行為，例如:onclick...，通常綁定單及響應函數</li>
+                        <a href="https://www.runoob.com/jsref/dom-obj-event.html">事件屬性參考</a>
+                        <ul>
+                            <li>event如不相容則 可以使用 event = event || window.event</li>
+                            <li>冒泡 : 後代遭觸發相同元素，則祖先也會跟著觸發</li>
+                                <ul>
+                                    <li>取消冒泡 : event.cancelBubble = ture</li>
+                                    <li>事件委派 : 綁訂於共同父元素 使用冒泡方式達到效果 <a href="https://www.youtube.com/watch?v=s46SJh83_yU&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=114&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">事件委派</a></li>
+                                    
+
+                                </ul>
+                            <li>事件的綁定 : 用於有多個事件要發生於一個元素上使用</li>
+                            <a href="https://www.youtube.com/watch?v=btZnnpW4W2M&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=115&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">事件的綁定</a>
+                                <ul>
+                                    <li>語法 : 元素.addEventListener()</li>
+                                    <li>addEventListener參數 1 事件字符串(不加on)  / 2 調用函數 / 3 是否再捕獲事件產生(一般為false)</li>
+                                    <li></li>
+
+                                </ul>
+                            <li>設置捕獲 SetCapture() 會將下一個鼠標案下相關事件捕獲到自己身上，取消捕獲設置releaseCapture()</li>
+                            <li>事件種類</li>
+                                <ul>
+                                    <li>onmousemove 按下滑鼠</li>
+                                    <li>onmousewheel 鼠標滾動 / DOMMmouseScroll (火狐專用 要搭配addEventListener)</li>
+                                    <li>event.wheelDelta 可以獲取滾輪的方向</li>
+                                    <li>event.preventDefault 取消默認行為  </li>
+
+
+
+
+
+                                </ul>
+
+
+
+                            <a href="https://www.youtube.com/watch?v=8ddyq9Ej_bg&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=120&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">捕獲</a>
+
+
+
+                        </ul>
+                    </li>事件簡單實例
+                        <ul> 
+                            <li>設置一個 id為btn的案紐</li>
+                                <p>button id = "btn"> 我是一個按鈕</p>
+                            <li>獲取節點，把id:btn 設置為一個變量為btn(此時btn等於此按鈕)</li>
+                                <p>var btn = document.getElementById("btn")</p>
+                            <li>修改此按鈕內容成123 (此函視為單擊響應函數，innerHTML為文本內容，123為此屬性的值)</li>
+                                <p>btn.onclick = function(){ btn.inneerHTML = "123"}</p>
+
+                        </ul>
+                    <li>使用CSS選擇器查詢節點 : document.querySelector("CSS選擇器寫法")---如有多個只會返回第一個/querySelectorAll會將封裝為數組返回</li>
+                    <a href="https://www.youtube.com/watch?v=jCdlYvw1Yic&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=101&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">querySelector</a>
+                    <li>增刪改DOM</li>
+                    <a href="https://www.youtube.com/watch?v=Go7AmFZTlPk&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=102&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">增刪改DOM</a>
+                    <ul>
+                        <li>createElement() : 創建一元素結點，需要標籤名為參數</li>
+                        <li>createTextNode() : 可創建文本節點，參數輸入文本內容</li>
+                        <li>appendChild() : 像一個父節點加入子節點 -語法 父節點.appendChild("子節點")</li>
+
+                    </ul>
+
+                    <li>JS 換 CSS style -內連樣式  語法 : 元素.style.樣式名 = 樣式值 (JS中的CSS不能有 - 符號)</li>
+                    <a href="https://www.youtube.com/watch?v=XqwBfIFNqtg&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=107&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">JS 換 CSS</a>
+                    <li>獲取當前 CSS 的元素 語法 : getComputedStyle(元素,null) --(返回當時元素封裝所有的值)</li>
+                    <a href="https://www.youtube.com/watch?v=G-3dSgJRApE&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=108&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">獲取當前 CSS</a>
+                    
+
+                </ul>
+
+
+
+        
+    </ul>
+
+    <h3>對象 Object</h3>
+    <a href="https://www.youtube.com/watch?v=k3MY8fvZRf0&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=48&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">Obj</a>
+        <ul>
+            <li>對象可以表存多個數據類型</li>
+            <li>檢查對象是否同類(對象 instanceof 構造函數)</li>
+            <li>對象種類:內部對象(Math.String..) / 宿組隊向(DOM.BOM) / 自定義對象(開發人員自訂)</li>
+            <li>特殊屬性名 ["屬性名"]，此方法可以傳遞變量值</li>
+            <li>創建對象-構造函數 語法 : var 對象 = new Object (使用關鍵字new)</li>
+            <a href="https://www.youtube.com/watch?v=aFmPArpmmAY&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=64&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">構造函數</a>
+                <ul>
+                    <li></li>
+                </ul>
+            <li>創建對象-對象字面量 語法 : var 對象 = { 屬性名:屬性值,屬性名:屬性值.... };</li>
+                <ul>
+                    <li>賦予值 語法 : 對象.屬性名 = "屬性值";</li>
+                    <li>讀取值 語法 : 對象.屬性名; </li>
+                    <li>刪除值 語法 : delete 對象.屬性名;</li>
+                </ul>
+            <li>創建對象-工廠式(對象都是Object，使用率低) 利用函數創建一函數，再使用參數帶入<a href="https://www.youtube.com/watch?v=urLbabFjdxA&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=63&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">例子</a></li>
+            <li></li>
+            <li>檢查對象屬性有否 "屬性名" in 對象  --回傳ture 、false</li>
+            <li>顯示所有屬性名 for(var 變量 in 對象)  有幾個屬性會執行幾次，可以用 [變量] 來查值 </li>
+            <li>對象屬性主要儲存於堆內存 ， 2對象屬性是否相等 ，主要看堆內存地址是否相等</li>
+            <li>函數function : 也是一個對象</li>
+            <a href="https://www.youtube.com/watch?v=pFQPa-1BqNc&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=51&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">函數</a>
+            
+                <ul>
+                    <li>創建語法 function 函數名(參數,參數,..){語句;語句;....}</li> 
+                    <li>調用語法 函數名(參數,參數,..);</li>
+                    <li>參數可以是一個對象 <a href="https://www.youtube.com/watch?v=yyAloB7_gqI&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=54&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">參數</a></li>
+                    <li>return加在函數後方，可以作為函數值，可以設置一個變量(var)來調用</li>
+                    <li>return語法 return 語句... ;</li>
+                    <li>立即執行函數(函數)(參數);<a href="https://www.youtube.com/watch?v=_oRaYVoi7Es&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=56    &ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">影片</a></li>
+                </ul>
+            <li>this</li>
+                <a href="https://www.youtube.com/watch?v=OyM9G71maw4&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=61&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">this 影片</a>
+                    <ul>
+                        <li>已函式調用時 this永遠是window</li>
+                        <li>以方法調用時 this則是調用方法的對象</li>
+                    </ul>
+            <li>call() 、apply()改變函數 this的值 ，參數是誰就會是誰</li>
+            <li>argument可以用來找尋函數的參數 </li>
+            <li>原型 prototype </li>
+                <a href="https://www.youtube.com/watch?v=wiY3F5eEXcY&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=66&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">原型</a>
+                <ul>
+                    <li>語法 構造函數.prototype.添加的屬性 = 添加的屬性值</li>
+                    <li>查詢原型查詢屬性 (對象__proto__對象)</li>
+                    <li>檢查自身是否有的屬性 語法-對象.OWnoProtoperty()</li>
+                </ul>  
+            <li>數組 arry</li>
+            <a href="https://www.runoob.com/jsref/jsref-obj-array.html">數組索引</a>
+            <a href="https://www.youtube.com/watch?v=XU1RyQ4nseI&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=71&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">數組</a>
+            <ul>
+                <li>創建一數組 var 數組變量 = new Array(值,值,值);</li>
+                <li>字面創建數組 var 數組變量 = [值,值,值]</li>
+                <li>查看數組長度 語法-- 數組變量.length</li>
+                <li>數組截取 語法: 數組.slice(開始,結束後一個) <a href="https://www.youtube.com/watch?v=5bvpAS3LlNs&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=76&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">slice</a> </li>
+                <li>數組刪除 語法: 數組.splice(開始,後面幾個,替換值,替換值....)，已刪除值返回</li>
+                <li>合併數組 語法: 數組concat(數組2); 為新數組返回，原數組不回變</li>
+                <li>將數組變字符串 語法: 數組.join() 參數為連接符/ </li>
+
+            </ul>
+
+            <li>Date對象</li>
+            <a href="https://www.youtube.com/watch?v=Bt4fr8gx8Io&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=82&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">影片</a>
+            <a href="https://www.runoob.com/jsref/jsref-obj-date.html">參考資料</a>
+            <ul>
+                <li>參數為指定時間 月/日/年 時間</li>
+                <li>getTime:只格林威治1970/1/1 0時0分到當前花費的毫秒數</li>
+                  
+            </ul>
+
+            <li>Math 對象</li> 
+            <a href="https://www.youtube.com/watch?v=UBE9rHIDh-I&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=82&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">影片</a>
+            <a href="https://www.runoob.com/jsref/jsref-obj-math.html">參考資料</a>
+                <ul>
+                    <li>開平方 Math.sqrt() </li>
+                    <li>去小數 Math.floor()</li>
+                    <li>無條件進位取整 Math.ceil() </li>
+                    <li>四捨五入取整 Math.around</li>
+                    <li>生成0~1隨機數 Math.random</li>
+                    <li>生成x~y隨機數 Math.floor(Math.random()* y-x ) + x</li>
+                </ul>
+
+            <li>String 對象</li>
+                <a href="https://www.youtube.com/watch?v=GGeh269Wu-M&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=84&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">影片</a>
+                <a href="https://www.runoob.com/jsref/jsref-obj-string.html">參考資料</a>
+
+                <ul>
+                    <li>chartCodeAt() 查詢字符編碼</li>
+                    <li>indexOf() 查看字符串是否有此內容，有則返回第一次出現的位置</li>
+                    <li>split() 將字符串拆分成數組 參數則是分點</li>
+                    <li>toUpperCase() 將其字符串轉換為大寫返回 /toLowCase() 轉成小寫</li>
+                </ul>
+        </ul>
+
+
+
+
+
+
+    
+    <h3>筆記</h3>
+
+    <ul>
+        <li>字符串(String)與 "任何值" 用 + 則為拼串 -- "123"+"2" = "1232" <a href="https://www.youtube.com/watch?v=Ada8py34vy0&list=PLmOn9nNkQxJFubqN777c_nScnJ4dpEYMT&index=15&ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">例子</a></li>
+        <li>++a、a++兩個的值都立即加一 </li>
+        <li>關係運算符 : 非數值布林值ture為1、false為0 / 一個為值為NAN則都是false / 兩側都是字符串則比unicode</li>
+        <li>NAN跟所有人布相等包括本身</li>
+        <li>函數聲明會提前備創建 ， 函數表達式(var)則不會</li>
+    </ul>
+    
+    
+
+    
+</body>
+    <script>
+
+    </script>
+</html>

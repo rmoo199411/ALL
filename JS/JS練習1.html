@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrap{
+            width: 300px;
+            display:flex;
+            flex-wrap:wrap;
+
+        }
+
+        .wrapper{
+            width: 100%;
+        }
+        
+        .buts{
+            box-sizing: border-box;
+            width: 150px;
+            background-color: rgb(220, 0, 0);
+            display: block;
+            padding: 20px;
+        }
+
+        .bt{
+            margin-top: 5px;
+        }
+
+        .select{
+            box-sizing: border-box;
+            width: 150px;
+            background-color: rgb(211, 126, 29);
+            padding: 20px;
+        }
+
+        .foods{
+            display:flex;
+            display: block;
+        }
+
+        .OK11{
+            
+           background-color: rgb(230, 245, 19);
+           width: 100px;
+           height: 20px;
+           margin-top: 5px;
+           
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+
+        <div class="wrapper">
+            <p>getElementById</p>
+            <p>getElementsByName</p>
+            <p>選取到的變顏色</p>
+        </div>
+
+
+        <div class="buts">
+            <button id="bt1" class="bt">我住的國家</button>
+            <button id="bt2" class="bt">我住的城市</button>
+            <button id="bt3" class="bt">我住的行政區</button>
+            <button id="bt4" class="bt">我喜歡的食物</button>
+            
+        </div>
+        <div class="select">
+            <div class="top">
+                <div id="country" class="OK11">台灣</div>
+                <div id="city" class="OK11">台北市</div>
+                <div id="district" class="OK11">松山區</div>
+                <div class="foods" >
+                    <div name="food" class="OK11">漢堡</div>
+                    <div name="food" class="OK11">拉麵</div>
+                    <div name="food" class="OK11">牛排</div>
+                </div>
+
+
+            </div>
+        
+            
+        </div>
+    </div>
+</body>
+<script>
+
+
+    function myclick(idstr , fun){
+        var btn = document.getElementById(idstr);
+        btn.onclick = fun;
+    }
+    
+
+
+    myclick("bt1" , function(){
+        
+        var country = document.getElementById("country");
+        country.style.backgroundColor = "red";
+    });
+
+
+    // var bt1 = document.getElementById("bt1");
+    // var country = document.getElementById("country");
+
+    // bt1.onclick = function(){
+    //     country.style.backgroundColor = "red";
+    // };
+    
+
+    var bt1 = document.getElementById("bt2");
+    var city = document.getElementById("city");
+
+    bt1.onclick = function(){
+        city.style.backgroundColor = "red";
+    };
+
+
+    var bt1 = document.getElementById("bt3");
+    var district = document.getElementById("district");
+
+    bt1.onclick = function(){
+        district.style.backgroundColor = "red";
+    };
+
+
+    var bt1 = document.getElementById("bt4");
+    var food = document.getElementsByName("food");
+
+    bt1.onclick = function(){
+        
+        for(i=0; i<food.length;i++){
+            
+            food[i].style.backgroundColor = "red";
+        }
+        
+    };
+
+
+</script>
+</html>

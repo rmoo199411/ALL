@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    
+</script>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    #info{
+        height: 50px;
+        color: aliceblue;
+        text-align: center;
+        background-color: rgb(170, 0, 0);
+        line-height: 50px;
+    }
+
+    .outer{
+        width: 500px;
+        margin: 50px auto;
+        background: rgb(12, 11, 11);
+        padding: 0 0 0 0;
+    }
+
+
+    .outer img{
+        width: 500px;
+    }
+
+    .bts{
+        text-align: center;
+        height: 40px;
+        margin-top: 10px;
+    }
+
+</style>
+
+
+
+<body>
+    <div class="outer">
+        
+        <div>
+            <p id="info"></p>
+        </div>
+        <img src="/JS/Jspics/1.jpg" alt="">
+        
+        <div class="bts">
+            <button id="pre">上一張</button>
+            <button id="next">下一張</button>
+        </div>
+    </div>
+</body>
+
+
+<script>
+    // 綁定按鈕
+    var pre = document.getElementById("pre");
+
+    var next = document.getElementById("next");
+
+    var img = document.getElementsByTagName("img")[0];
+
+    var index = 0;
+
+    var picArry = ["/JS/Jspics/1.jpg" , "/JS/Jspics/2.jpg" , "/JS/Jspics/3.jpg" , "/JS/Jspics/4.jpg" , "/JS/Jspics/5.jpg"]
+
+    info.innerHTML = "一共"+ picArry.length + "張照片，現在是第"+ (index+1) +"張"
+
+
+
+    // 單擊響應函數
+    pre.onclick = function(){
+        // alert(pre);
+        index--;
+        
+
+        if(index < 0){
+            index = picArry.length-1;
+        }
+        
+        img.src = picArry[index];
+        info.innerHTML = "一共"+ picArry.length + "張照片，現在是第"+ (index+1) +"張"
+    };
+
+
+    next.onclick = function(){
+        // alert(next);
+        index++;
+        
+        if(index > picArry.length-1){
+            index = 0;
+        }
+
+        img.src = picArry[index]; 
+
+        info.innerHTML = "一共"+ picArry.length + "張照片，現在是第"+ (index+1) +"張"
+
+    };
+
+    
+
+    
+
+    
+
+
+</script>
+</html>

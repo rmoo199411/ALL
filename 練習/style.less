@@ -1,0 +1,76 @@
+body{
+    background: rgb(2, 80, 61);
+}
+
+
+//一般巢狀
+
+.box1{
+    background-color: #fff;
+
+    .box2{
+        background-color: rgb(214, 39, 39);
+
+        .box3{
+            background-color: rgb(57, 2, 2);
+        }
+    }
+
+    .box4{
+        background-color: rgb(6, 2, 105);
+
+        &:hover{
+            color: #bfa;
+        }
+        
+    }
+
+    &:hover{
+        color: #bfa;
+    }
+}
+
+
+
+//變量用法
+//寫法   @+變量名:任何值;
+
+@a:100px;
+@b:#bfa;
+@c:box6;
+
+.box5{
+    width: @a ;
+    background-color: @b ;
+    height: $width;
+}
+
+
+//extend用法
+.box7:extend(.box5){
+
+    box-shadow:0 0 10px #bfa;
+    
+}
+
+
+
+//做為類名外要加{}
+.@{c}:extend(.box5){
+    box-shadow:0 0 20px #bfa;
+    
+}
+
+
+//mixin用法
+.testmix(@wow){
+    width: @wow;
+    height: @wow;
+    color: #000;
+}
+
+.box8{
+    .testmix(200px);
+    background-color: #fff;
+}
+

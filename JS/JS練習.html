@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        // 單數練習
+        // 打印1~100的每個質數
+        // 1~100質數的盒
+
+        // var sum = 0;
+        // var sumAll = 0;
+        
+        
+        // for(i=0 ; i < 100 ;  ){
+        //     i++;
+
+        //     if(i % 2 != 0){ 
+                
+        //         var sum = i;
+        //         var sumAll =sumAll + sum;
+        //         console.log("sum =" + sum);
+        //         console.log("sumAll = " + sumAll);
+                
+        //     }
+
+        // }
+
+
+        // ***** X 5
+        // for(var i=0; i<5 ;i++){
+        //     document.write("<p>*****</p>")
+        // };
+
+
+        // *
+        // **
+        // ***
+        // ****
+        // *****
+
+        
+        // for(var i=0 ; i<5 ;i++){
+
+        //     for(var j=0 ; j<i+1; j++){
+        //         document.write("*")
+        //     }
+        //     document.write("</br>")
+        // }
+
+
+
+
+// 作用域       
+        // var a = 123;
+        // alert(b);
+        
+        // function fun(){
+        //     alert(a);
+        //     a = 456
+            
+        // }
+        
+        // alert(a);
+
+        
+
+        // var b = 3;
+        // var c = 5;
+        
+
+// 構造函數創建        
+
+        // function CP(name,age,gender){
+        //     this.name = name
+        //     this.age = age
+        //     this.gender = gender
+        // }    
+                       
+
+// prototype原型
+//         CP.prototype.Sayage = function(){
+//             alert(this.age);
+//         }
+  
+    
+
+    
+        
+//         var cp1 = new CP(1,12,33);
+
+//         cp1.Sayage();
+
+
+
+// // 篩選成人練習
+//     // 構造函數創建
+//     function CP(name,age){
+//             this.name = name;
+//             this.age = age;
+//     }    
+
+//     // prototype原型
+//     //   CP.prototype.Sayage = function(){
+//     //      alert(this.age);
+//     //   }
+  
+
+//     var per1 = new CP("老1",20);
+//     var per2 = new CP("老2",19);
+//     var per3 = new CP("老3",18);
+//     var per4 = new CP("老4",17);
+
+//     // 將數組封裝到新數組perArry中
+//     var perArry =[per1,per2,per3,per4];
+  
+
+
+//     // 建立一個adult函數套入，參數arr
+//     function adult(arr){
+
+//         // 創建建一個陣列(作為返回值用)
+//         var newArry = [];
+
+//         // 遍歷(讀取所有的值)
+//         for(var i=0; i<arr.length ; i++ ){
+         
+//             // 將所有數組放入P中
+//             var p = arr[i]
+
+//             // 設置條件 age>=18
+//             if(p.age >= 18){
+            
+//             // 符合條件的部分加入newArry陣列中
+//             newArry.push(p.name)
+
+//             }
+           
+//         }
+
+//         // newArry的值做為adult函數的結果
+//         return newArry;
+//     }
+
+//     // 設置變量 result 為  函數adult 參數以perArry作為結果
+//     var result = adult(perArry);
+
+//     console.log(result)
+
+
+    
+
+
+
+
+    
+
+
+
+    </script>
+</head>
+<body>
+    <button id="btn">321</button>
+
+</body>
+<script>
+
+    var btn = document.getElementById("btn")
+    
+    btn.onclick =function(){
+        alert("321");
+        btn.innerHTML="123"
+    }
+
+    </script>
+</html>
