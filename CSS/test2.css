@@ -180,7 +180,7 @@ li{
     overflow: hidden;
     /* 展開 */
     transition: height 0.2s;
-    z-index: index 999; ;
+    z-index : 9999999; 
 
 }
 
