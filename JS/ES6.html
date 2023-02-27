@@ -27,12 +27,33 @@
                 <li>補充 : map( fuction元素處裡的函式 (value處裡的元素 ,index處裡的索引 ,array需要處裡的陣列) )</li>
                 <li>箭頭作用域的 this 指的是父級對象的this </li>
                 <a href="https://www.youtube.com/watch?v=4He6UbwhBYY&list=PLCRqr1mERvdJ0IZMD1U4oSB7k0gyAjyIx&index=6&ab_channel=CodecastsJS">箭頭 this</a>
+                <li>箭頭不適用 : 構造函數，一個方法綁定對象時 </li>
             </ul>
+        <li>默認函數質 語法function(參數=默認值) 可以直接在參數加入(未賦值時，如有多個則要註明undefined)</li>   
+        <li>標籤模板字符串</li>
+                <ul>
+                    <li>將內容套入標籤中 語法 : 函數名`內容 ${值}....` </li>
+                    <li>sanitize 用於防範 XSS 攻擊，語法 : sanitize模板字符串 </li>
+                    
+                    <a href="https://www.youtube.com/watch?v=NsZ_qBLB7XQ&list=PLCRqr1mERvdJ0IZMD1U4oSB7k0gyAjyIx&index=10&ab_channel=CodecastsJS">sanitize </a>
+                    <li></li>
+                </ul>
+        <li>對象講解</li>
+        <a href="https://www.youtube.com/watch?v=5H5P3kZcdyQ&list=PLCRqr1mERvdJ0IZMD1U4oSB7k0gyAjyIx&index=13&ab_channel=CodecastsJS">對象</a>
+                <ul>
+                    <li>語法 : const{對象中的標籤} = 對象.(父標籤)  / cosole.log(標籤)</li>
+                    <li>如果已經const該標籤，可以 對象中的標籤 : 新賦值----流程為 找尋對象-->找尋對象中的相同標籤-->將此標籤的值給新賦值 </li>
+                    <li>值為undiefine ，const{對象中的標籤 = 值}，此時默認此標籤直接賦予此值</li>
+                
+                </ul>
 
 
+    </ul>
 
-
-
+    <ul>筆記
+        <li>數組中間隔開符號 語法 : 數組.join() 參數中加入符號</li>
+        <li>三元表達式 語法: 比對 ? 是得返回值 : 否的返回值  (可以取代if)</li>
+        <a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">三元表達式</a>
     </ul>
 </body>
 </html>

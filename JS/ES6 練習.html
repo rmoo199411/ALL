@@ -7,6 +7,13 @@
     <title>Document</title>
 
 </head>
+<style>
+    .hight{
+        background-color: #0084a2;
+        font-size: 15px;
+        color: aliceblue;
+    }
+</style>
 <body>
     
 </body>
@@ -14,34 +21,65 @@
 
 // 箭頭函式基礎
 
-//     function oneFun(a){
-//         return a * 1;
-//     };
+    //     function oneFun(a){
+    //         return a * 1;
+    //     };
 
-//     twoFun = b => b * 2;
+    //     twoFun = b => b * 2;
 
-//     console.log(oneFun(1));
-//     console.log(twoFun(1));
+    //     console.log(oneFun(1));
+    //     console.log(twoFun(1));
+
 
 
 
 // 箭頭函式中的This
 
-// const nick = {
-//     name: 'nick',
-//     hobbies: [`game`, `sleep`, `TV`],
-//     printAll: function() {
+    // const nick = {
+    //     name: 'nick',
+    //     hobbies: [`game`, `sleep`, `TV`],
+    //     printAll: function() {
 
-//         this.hobbies.map(hobby => {
-//             console.log(`${this.name} loves ${hobby}`);
-                // 上面的this在普通函數指的是function函數所以式window
-                // 在箭頭函式中的指的是他的父級函數
+    //         this.hobbies.map(hobby => {
+    //             console.log(`${this.name} loves ${hobby}`);
+                    // 上面的this在普通函數指的是function函數所以式window
+                    // 在箭頭函式中的指的是他的父級函數
 
-//         })
+    //         })
+    //     }
+    // }
+
+    // nick.printAll();
+
+
+
+
+// 標籤模版
+
+// function hight(strings, ...values){
+//     // 用highted 數組，用map將每個值遍歷一遍，形成一組數組 
+//     const highted = values.map(value => `<span class="hight">${value}</span>`);
+
+
+//     // 設定一個字符串
+//     let str = ''
+    
+//     // 利用forEach 跑str字符串 ( ||"" 如沒有添加這個，數組則會有一個空數組 )  
+//     strings.forEach((string, i) => str += `${string}${highted[i] || " "}`);
+
+//     return str;
+
 //     }
-// }
 
-// nick.printAll();
+//     const user = 'nick';
+//     const topic = 'Learn to use markdown';
+//     const sentence = hight`Hello ${user} has comented on your topic ${topic} .`;
+
+//     console.log(sentence);
+//     document.body.innerHTML = sentence;
+
+
+
 
 </script>
 </html>
