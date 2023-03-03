@@ -13,9 +13,10 @@
         <li>變量</li>
         <a href="https://www.youtube.com/watch?v=qjHNdaf3cpE&list=PLCRqr1mERvdJ0IZMD1U4oSB7k0gyAjyIx&index=2&ab_channel=CodecastsJS">變量</a>
             <ul>
-                <li>var : 函數作用域，可以重新定義值</li>
-                <li>let : 塊狀作用域，可以重新定義值</li>
-                <li>const : 塊狀作用域，* 不可以重新定義值 ， 但裡面的屬性值可以改變 *</li>
+                <li>var : 函數作用域，可以重新定義值，在函數任何地方都</li>
+                <li>let : 塊狀作用域，可以重新賦值，但塊中變量不能改變 ，例如 : let a=3 ，可以a=4 則不能用 let a=4</li>
+                <li>const : 塊狀作用域，* 不可以重新賦值、變量不能改變 ， 但裡面的屬性值可以改變 *</li>
+                <li>塊級作用域指{}內的範圍</li>
             </ul>
         <li>箭頭函式</li>
         <a href="https://www.youtube.com/watch?v=oNTAPw5Sxzw&list=PLCRqr1mERvdJ0IZMD1U4oSB7k0gyAjyIx&index=5&ab_channel=CodecastsJS">箭頭</a>
@@ -23,8 +24,7 @@
                 <li>語法 去掉fuction 在函數後面加上 =></li>
                 <li>原始函式 fuction 函式名(){}</li>
                 <li>箭頭函式 const 函式名 = 參數 => {}</li>
-                <li>箭頭韓式補充 ()=>{retrun} 等於 ()=>retrun</li>
-                <li>補充 : map( fuction元素處裡的函式 (value處裡的元素 ,index處裡的索引 ,array需要處裡的陣列) )</li>
+                <li>箭頭韓式補充 函式名=()=>{retrun} 等於 ()=>retrun</li>
                 <li>箭頭作用域的 this 指的是父級對象的this </li>
                 <a href="https://www.youtube.com/watch?v=4He6UbwhBYY&list=PLCRqr1mERvdJ0IZMD1U4oSB7k0gyAjyIx&index=6&ab_channel=CodecastsJS">箭頭 this</a>
                 <li>箭頭不適用 : 構造函數，一個方法綁定對象時 </li>
@@ -42,18 +42,251 @@
         <a href="https://www.youtube.com/watch?v=5H5P3kZcdyQ&list=PLCRqr1mERvdJ0IZMD1U4oSB7k0gyAjyIx&index=13&ab_channel=CodecastsJS">對象</a>
                 <ul>
                     <li>語法 : const{對象中的標籤} = 對象.(父標籤)  / cosole.log(標籤)</li>
-                    <li>如果已經const該標籤，可以 對象中的標籤 : 新賦值----流程為 找尋對象-->找尋對象中的相同標籤-->將此標籤的值給新賦值 </li>
+                    <li>如果已經const該標籤，可以用對象中的標籤 : 新賦值----流程為 找尋對象-->找尋對象中的相同標籤-->將此標籤的值給新賦值 </li>
                     <li>值為undiefine ，const{對象中的標籤 = 值}，此時默認此標籤直接賦予此值</li>
                 
                 </ul>
+                
+        <li>數組</li>
+        <a href="https://www.youtube.com/watch?v=bfEuohl9jLE&list=PLCRqr1mERvdJ0IZMD1U4oSB7k0gyAjyIx&index=14&ab_channel=CodecastsJS">數組</a>
+            <ul>
+                <li>假設一個數組 const numbers =['one', 'two', 'three']</li>
+                <li>取出numbers[2] 可以用 const [,,three] = numbers </li>
+                <li>...others取出指定剩餘的值並返回數組 ， 例如: 我除了[0]外 可以用const [one,...others] = number;</li>
+                <li>ab值交換 可以 [a,b] = [b,a]; </li>
+                <li>for 循環(變歷)</li>
+                    <ul>
+                        <li>語法 : for(let index = num ; index 條件 ; index加或減 ){}</li>
+                        <li>index : 變量</li>
+                        <li>num : 從第幾個數組開始</li>
+                    </ul>
+                <li>forEach 循環(變歷) array.forEach(element,index,array);</li>
+                    <ul>
+                        <li>缺點是不能中斷break、continue</li>
+                        <li>以下參數可以隨意設變數，指設一個參數則默認element值</li>
+                        <li>element : 每跑一次的值，element[N]，數組值第N個字返回</li>
+                        <li>index (可不加): 排第幾個</li>
+                        <li>arry (可不加): 返回整個數組arry[N]，為排第N個數組</li>
+                    </ul>
+                <li>for in 循環(變歷)</li>
+                <ul>
+                    <li>可使用break、continue</li>
+                    <li>語法 : for(let index in array){}</li>
+                    <li>index 為變量</li>
+                    <li>arry 此為數組名</li>
+                    <li>arry[index] 可變歷所有值</li>
+                </ul>
+                <li>for of 循環(變歷)</li>
+                    <ul>
+                        <li>語法 :  for(let value of array){}</li>
+                        <li>value : 此為變數變歷回傳的值</li>
+                        <li>arry : 此為數組名</li>
+                        <li></li>
+                    </ul>
+                <li>entries() </li>
+                    <ul>
+                        <li>entries()值，類似屬性 key()排序，value()所有的值</li>
+                        <li>此為內建取得 數組 跟 變歷值，內建iterator函數</li>
+                        <li>語法 : for( let [index,value] in arry.entries() ){}</li>
+                        <li>此方法iterator.next調用，一次調用返回一個資料</li>
+                        <li>變歷完，屬性done會變ture</li>
+                    </ul>
+                <li>Array.from(類數組,fun) and .of(類數組,fun)</li>
+                    <ul>.from
+                        <li>把類數組轉化為一般數組，此為靜態(原型對象)調用</li>
+                        <li>類數組，例如 querySelectorAll 返回值</li>
+                        <li>Array.from 的 Array為內建值不能更改</li>
+                        <li>類數組 : 當前類數組</li>
+                        <li>fun : 此為函數 例如 : 變量 => 所要做的是</li>
+                    </ul>
+                    <ul>.of
+                        <li>參數填寫的東西皆會變成數組返回</li>
+                    </ul>
+
+                <li>map( )</li>
+                    <ul>
+                        <li>用法 : Array.map( function (currentValue ,index ,array) {})</li>
+                        <li></li>
+                        <li>function : 元素處裡的函式</li>
+                        <li>currentValue : 變數，當前元素值 (默認)</li>
+                        <li>index : 變數，當前處裡的索引 (可省略)</li>
+                        <li>array : 變數，當前陣列 (可省略)</li>
+                    </ul>
+                    
+                <li>shift()</li>
+                    <ul>
+                        <li>直接刪除數組第一個值並返回刪除值</li>
+                        <li>語法 : 返回值變量 = array.shift()</li>
+
+                        <li>splice() 可以指定刪除值，參數填入索引值</li>
+                    </ul>
+
+
+
+
+                <li>補充</li>
+                    <ul>
+                        <li>reduce 數組累加</li>
+                            <ul>
+                                <li>語法array.reduce(function(accumulator, currentValue, currentIndex, array){},initialValue);</li>
+                                <li>accumulator : (默認參數) 也可以取陣列中的第一個元素</li>
+                                <li>currentValue : (默認參數) 除了第一個元素外的元素 </li>
+                                <li>array : 陣列本身 (可不寫)</li>
+                                <li>initialValue : 累加起始值 (可不寫)</li>
+                            </ul>
+
+                        <li>數組合併concat 語法 : newArray = arrayA.concat(arrayB) 用於將兩個數組相加，並將數組B加在數組A後，變成心術組封裝成newArray</li>
+                        <li></li>
+
+
+
+                    </ul>
+            </ul>
+        <li>剩餘運算符</li> 
+            <ul>
+                <li>用於數組有多個剩餘值，並返回數組</li>
+                <li>語法 : fun = (變量A, ...變量B)=>{ 處理 }</li>
+                <li>fun : 函式變量</li>
+                <li>變量A : 此變量依照數組順序，代表不獲取的值，可設多個用,隔開</li>
+                <li>...變量B : 代表剩餘要獲取的值，一定要加...，一定要放在最後</li>
+            </ul> 
+        <li>ES6數組合併 語法 : newArray =[...數組A, ...數組B] 用於將兩個數組相加，並將數組B加在數組A後，變成心術組封裝成newArray</li>      
+        
 
 
     </ul>
+
+    <li>promise axios</li>
+        <ul>axios
+            <li>此方法主要是取得AJAX資料</li>
+            <li>axios.get 語法 : axios.get('URL').then( response => { }) .catch(error => { } );</li>
+            <li>URL : 取得JSON的網站或位置 ( API )</li>
+            <li>.then 接收資訊成功時，返回response函數</li>
+            <li>.catch 接收資訊失敗時，返回error函數</li>
+            <li>then、catch 為 Promise 應用 </li>
+            
+        </ul>
+
+        <ul>Promise
+            <li>Promise.all()</li>
+                <ul>
+                    <li>取數組為參數，反回一個新數組</li>
+                    <li>其中有一個被拒絕則返回錯誤</li>
+                </ul>
+            <li>Promise.race()
+                <ul>
+                    <li>取數組為參數，反回一個新數組</li>
+                    <li>已先回傳的數組結果作為返回值</li>
+                </ul>
+            </li>
+            <li></li>
+            <li></li>
+        </ul>
+
+
+    <li>Symbol </li>
+    <a href="">Symbol</a>
+        <ul>
+            <li>為ES6新增的第7種屬性</li>
+            <li>用於對象屬性命名衝突</li>
+            <li>語法 : [symbol('資料')] : 值</li>
+            <li>缺點不得用for變歷</li>
+            <li>變歷需要使用 Object.getOwnPropertySymbols(數組).map{函數 => 數組[函數]} </li>
+        </ul>
+
+    <li>ES6 class</li>
+    <a href="https://www.youtube.com/watch?v=IlhiqZFJK3c&list=PLCRqr1mERvdJ0IZMD1U4oSB7k0gyAjyIx&index=41&ab_channel=CodecastsJS">class</a>
+        <ul>
+            <li>此為一類，定依該類構造函數與多個方法</li>
+            <li>與函式差別為不能在聲明前使用</li>
+            <li>必須使用new 才能調用 ---  const 變量 = new ClassName()  </li>
+            <li>語法 : class ClassName{constructor(){}  method1(){}  get(){}  set(){}..... }</li>
+            <li>constructor : 構造函數</li>
+            <li>method1 : 此類需要調用的方法</li>
+            <li>class 的繼承 </li>
+                <ul>
+                    <li>class a 繼承 b 範例</li>
+                    <li>class a extends b { super(資料) }</li>
+                    <li>super(資料)</li>
+                    <li>extends 繼承</li>
+                    <li>如果當中有方法相同 則會a覆蓋掉</li>
+                </ul>
+
+        </ul>
+    <li>Generator 生成器</li>
+        <ul>
+            <li>設定一個函數 語法 : function* 函數(){yield} </li>
+            <li>yield 類似普通函式的return 但可以設置多個</li>
+            <li>調用 const 變量 = 函數() ----> 用變量.next() </li>
+        </ul>
+
+    <li>Proxy()</li>   
+        <ul>
+            <li>用於捕捉對象並不影響原本對象的值</li>
+            <li>用法 : const proxy = new Proxy(person, { get (target, prop, receiver){}  })</li>
+
+            <li>person : 數據</li>
+            <li>target : person對象</li>
+            <li>prop : 數據的值</li>
+            <li>receiver : 整個數據</li>
+        </ul>
+
+    <li>Set()</li>
+        <ul>
+            <li>Set 類似數組，差別 : 新增數組有自符串與數字差別、相同的值不再加入 </li>
+            <li>const 對象 = new Set(['','',....])</li>
+            <li>可用 : 對象.add('') 加入此 Set </li>
+            <li>查裡面的總數，用 對象.size</li>
+            <li>查找內容是否有 : 對象.has('值')</li>
+            <li>刪除 : 對象.delete('現有值')</li>
+            <li>Set 可用for of / for each變歷</li>
+        </ul>
+    <li>WeakSet()</li>
+        <ul>
+            <li>類似Set但WeakSet限制較多，元素只能是對象</li>
+            <li>用法 : const 對象 = new WeakSet([對象,對象,....])</li>
+            
+            <li>不能用for of / for each</li>
+            <li>會將內存刪除以房內存洩漏</li>
+            <li></li>
+            <li></li>
+        </ul>
+    <li>Map()</li>
+        <ul>
+            <li>類似Set但Map是對象</li>
+            <li>屬性=>值</li>
+            <li>用法 : const 對象 = new Map( [ [],[] ] );</li>
+            <li>利用 對象.set來新增對象</li>
+            <li>查找內容是否有 : 對象.has('值')</li>
+            <li>刪除 : 對象.delete('現有值')</li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+
+
+
+
+
+
 
     <ul>筆記
         <li>數組中間隔開符號 語法 : 數組.join() 參數中加入符號</li>
         <li>三元表達式 語法: 比對 ? 是得返回值 : 否的返回值  (可以取代if)</li>
         <a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">三元表達式</a>
+        <li>選擇器 querySelectorAll('選擇器')</li>
+            <ul>
+                <li>選擇器 : 可已是標籤，可以是class、ID 選擇器，</li>
+                <li>此返回為一個 類數組</li>
+                <li></li>
+            </ul>
+        <li>對象.toggle </li>
+        <li>textContent 獲取元素的文本内容</li>
+        <li>arguments 為所有函數所輸入的參數，此argument反回為 類數組 ，等於在參數填寫...args ---> rest 运算符方式</li>
+        
+        
+            
     </ul>
 </body>
 </html>

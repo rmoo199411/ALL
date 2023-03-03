@@ -7,16 +7,69 @@
     <title>Document</title>
 
 </head>
+
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 <style>
-    .hight{
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+    /* .hight{
         background-color: #0084a2;
         font-size: 15px;
         color: aliceblue;
+    } */
+
+
+/* 數組練習     */
+    /* body{
+        background-color: rgb(242, 159, 6);
+        
+        
+         display: flex; 
+    } */
+
+    /* .heading{
+        font-size: 200px;
+        color: aliceblue;
+        text-shadow: 8px 8px 10px rgb(93, 91, 91);
+        margin: auto;
+        justify-content: center;
+        line-height: 700px;
+        
+        
+        
     }
+
+    .heading span{
+        display: inline-block;
+        margin: 20px;
+    }
+
+    .heading span:hover{
+        
+        transform: translatey(-20px) rotate(10deg)  scale(2);
+
+    } */
+
+
 </style>
+
+
 <body>
     
+<!-- 數組練習 -->
+    <!-- <div class="heading">RMOO!</div> -->
+<div class ></div>
+
+
 </body>
+
+
+
 <script>
 
 // 箭頭函式基礎
@@ -34,6 +87,13 @@
 
 
 // 箭頭函式中的This
+    
+    // const numbers =[18, 25, 3, 4];   
+
+    // const num = Array.from(numbers, nn => nn*3 )
+
+    // console.log(num);
+        
 
     // const nick = {
     //     name: 'nick',
@@ -80,6 +140,169 @@
 
 
 
+// 對象
+    
+    // var nick ={
+    //     name: 'Nick',
+    //     age: 25,
+    //     family: {
+    //         father: 'Bob',
+    //         mother: 'Mary',
+    //         brother: 'Jack',
+            
+    //     }
+    // } 
+
+    // var {name, age} = nick;
+
+
+
+// 數組
+
+    // const numbers =[1, 2, 3, 4];
+
+    // const[one,...others] = numbers;
+
+    // console.log(others)
+
+    // var a = 10;
+    // var b = 20;
+   
+    // [a,b] = [b,a];
+        
+    // console.log(a);
+    
+    // numbers.forEach((nymber,1,numbers)=>{
+    //     console.log(numbers)
+    // })
+    
+    // numbers.forEach( (arr,kk,num)  => console.log(kk));
+
+    
+    // let sum = 0
+    
+    // for(let number of numbers){
+        
+    //     sum = sum + number;
+        
+    // }
+    
+    // console.log(sum); 
+    
+
+
+// Array.from / Array.of
+
+
+    // const numbers =[18, 25, 3, 4];   
+
+    // const num = Array.from(numbers, nn => nn*3 )
+
+    // console.log(num);
+
+   
+
+
+
+
+// arguments        
+
+//     function sum() {
+//         let total = 0;
+//         for (let i = 0; i < arguments.length; i++) {
+//              total += arguments[i];
+//              console.log(arguments)
+//         }
+//         return total;
+//      }
+
+//      console.log(sum(1)); 
+
+
+
+    // const numbers = [1, 22, 3, 4, 5];
+    // const sum = numbers.reduce(function(a, c, currentIndex, array) {
+    //   return a ;
+    // }, 2 );
+    // console.log(sum); // 15
+
+
+
+// 餘數運算符號
+
+        // contty = (kk,bb ,cc ,...tt)=>{
+        //     console.log(tt)
+        // }
+
+        // contty(18, 25, 3, 4,55,88,57);
+
+// 數組練習
+
+        // const heading = document.querySelector('.heading');
+
+
+
+        // headingspan = word =>{
+        //    return[...word].map( letter => `<span>${letter}</span>`) .join('')
+        // }
+
+        // heading.innerHTML = headingspan(heading.textContent);
+
+
+        // const family = ['father', 'mother', 'sister'];
+        // const name = ['Bob', 'Marry', 'Vivy']
+
+        // const All = {
+        //     [family.shift()] : name.shift(),
+        //     [family.shift()] : name.shift(),
+        //     [family.shift()] : name.shift(),
+
+        // }
+
+        // console.log(All);
+
+
+// AJAX練習
+
+
+// axios.get('https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json')
+//     .then(res => {
+
+//         const result1 = res.data.filter((item) => item.sno === "500110033");
+        
+//         return result1
+        
+//     })
+//     .catch(function (error) {
+//         console.log(error);
+//     });
+
+
+    
+
+    const person = {
+    name: 'John',
+    age: 30
+    };
+
+    const proxy = new Proxy(person, {
+    get(target, prop, receiver) {
+        console.log(`Getting property "${prop}"`);
+        return receiver;
+    }
+    });
+
+    console.log(proxy.name); // Getting property "name"，"John"
+    console.log(proxy.age); // Getting property "age"，30
+
+
+
+
+
+
+
+
 
 </script>
+
 </html>

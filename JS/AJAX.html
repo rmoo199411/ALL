@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>顯示數據</title>
+  </head>
+  <body>
+    <h1>顯示所有 Youbike 所有松山區的資料</h1>
+    <div class="heading"></div>
+
+    <ul id="data-list"></ul>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+
+    const heading = document.querySelector('.heading');
+    const dataList = document.getElementById('data-list');
+    var i = 0;
+
+
+      axios.get('https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json')
+        .then((response) => {
+        // 請求成功後的處理
+            const data = response.data;
+
+
+            
+
+
+          // 使用filter方法查找所有age為25的數據
+            const result = data.filter((item) => item.sarea === "松山區");
+                
+                // heading.innerHTML = item;
+
+
+            // 將符合條件的數據插入到列表中
+            result.forEach((item) => {
+                
+                i++
+                const li = document.createElement('li');
+                li.textContent = `${i}:  ---站名: ${item.sna}, 地址: ${item.ar} -----> 剩餘數量:${item.sbi}`;
+                dataList.appendChild(li);
+                
+
+
+            
+          });
+        })
+        .catch((error) => {
+          // 請求失敗後的處理
+          console.error(error);
+        });
+    </script>
+  </body>
+</html>
